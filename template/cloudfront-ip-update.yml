@@ -130,4 +130,9 @@ Resources:
         Properties:
             FunctionName: !GetAtt lambdaf942c03.Arn
             Action: lambda:InvokeFunction
-            Principal: sns.amazonaws.com            
+            Principal: sns.amazonaws.com
+Outputs:
+  LambdaFunctionName:
+    Description: 'ARN of Lambda function which update Security groups'
+    Value: !GetAtt 'lambdaf942c03.TopicName'
+    
